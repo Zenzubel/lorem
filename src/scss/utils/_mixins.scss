@@ -79,19 +79,19 @@
   #{$color-name}-rgb: $red, $green, $blue;
 }
 
-@mixin init-css-vars($map: $colors) {
-  @each $theme, $group in $map {
-    @if $theme == 'light' {
-      :root {
-        @include each-css-vars($theme, $group);
-      }
-    } @else {
-      :root[data-theme='#{$theme}'] {
-        @include each-css-vars($theme, $group);
-      }
-    }
-  }
-}
+// @mixin init-css-vars($map: $colors) {
+//   @each $theme, $group in $map {
+//     @if $theme == 'light' {
+//       :root {
+//         @include each-css-vars($theme, $group);
+//       }
+//     } @else {
+//       :root[data-theme='#{$theme}'] {
+//         @include each-css-vars($theme, $group);
+//       }
+//     }
+//   }
+// }
 
 @mixin each-css-vars($theme, $group) {
   @each $color, $item in $group {

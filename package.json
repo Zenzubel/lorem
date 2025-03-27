@@ -22,6 +22,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@babel/preset-env": "^7.12.7",
+    "@svgr/webpack": "^8.1.0",
     "@webpack-cli/serve": "^1.1.0",
     "address": "^1.1.2",
     "autoprefixer": "^10.0.4",

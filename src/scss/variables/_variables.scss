@@ -11,24 +11,23 @@ $breakpoint-xxs-2: 360px;
 $breakpoint-xxs: 320px;
 
 /* Container */
-$container-max-width-native: 1200px;
-$container-padding-native: 16px;
-$container-padding-mobile-native: 14px;
-$container-max-width: calc(#{$container-max-width-native} + (2 * #{$container-padding-native}));
-$container-padding: 0 $container-padding-native;
+$container-max-width: 117.2rem;
+$container-max-width-md: 1172px;
+$container-padding: 1.6rem;
+$container-padding-md: 14px;
 
 /* Section */
-$section-padding: 40px 0;
-$section-padding-tablet: 20px 0;
-$section-padding-phone: 15px 0;
+$section-padding: 4rem 0;
+$section-padding-md: 20px 0;
+$section-padding-xs: 14px 0;
 
 /* Fonts */
 // paths
 $fonts-path: '../fonts/';
-$font-path: $fonts-path + 'Roboto/';
+$font-path: $fonts-path + 'Lato/';
 
 // fonts
-$font: 'Roboto';
+$font: 'Lato';
 $font-fallback: 'Arial';
 
 $main-font: $font, $font-fallback;
@@ -36,7 +35,26 @@ $main-font: $font, $font-fallback;
 /* Global */
 $transition-duration: 0.3s;
 $transition-timing-function: ease;
-$border-radius: 4px;
+$border-radius: 3px;
+
+// buttons
+$button-border-width: 1px;
+$button-border-radius: 4px;
+$button-font-size: 1.3rem;
+$button-font-size-md: 13px;
+$button-font-weight: 400;
+$button-line-height: 1.3;
+$button-padding: 1.5rem;
+$button-padding-md: 15px;
+$button-min-width: 12rem;
+$button-min-width-md: 120px;
 
 /* Typography */
-
+$h1-font: $main-font;
+$h1-color: $black-text;
+$h1-font-weight: 700;
+$h1-line-height: 1.3;
+$h1-font-size: 4.8rem;
+$h1-font-size-md: 48px;
+$h1-font-size-sm: 38px;
+$h1-font-size-xs: 28px;

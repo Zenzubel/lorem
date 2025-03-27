@@ -1,0 +1,54 @@
+// colors
+$white: #fff;
+$black: #000;
+$blue-1-native: #3e9cdc;
+$blue-2-native: #43abf0;
+$blue-3-native: #286690;
+$blue-4-native: #42a9ed;
+$gray-1-native: #10101d;
+$gray-2-native: #2a2b30;
+$gray-3-native: #6f6d7b;
+$gray-4-native: #272733;
+$gray-5-native: #c4c4c4;
+$gray-5-native: #c3c3c3;
+$gray-6-native: #3d4050;
+
+// blue
+$blue-1: #{$blue-1-native};
+$blue-2: #{$blue-2-native};
+$blue-3: #{$blue-3-native};
+$blue-4: #{$blue-4-native};
+
+// gray
+$gray-1: #{$gray-1-native};
+$gray-2: #{$gray-2-native};
+$gray-3: #{$gray-3-native};
+$gray-4: #{$gray-4-native};
+$gray-5: #{$gray-5-native};
+$gray-6: #{$gray-6-native};
+
+// bg
+$white-bg: $white;
+$black-bg: $black;
+$blue-bg: $blue-1;
+$gray-bg-1: $gray-4;
+$gray-bg-2: $gray-5;
+$gray-bg-3: $gray-6;
+$gray-rgba: $gray-1;
+$white-rgba: $white;
+
+// text
+$white-text: $white;
+$black-text: $black;
+$blue-text-1: $blue-2;
+$blue-text-2: $blue-1;
+$gray-text-1: $gray-2;
+$gray-text-2: $gray-4;
+
+// link hover
+$text-hover: $blue-2;
+
+// modify
+$gray-1-opacity: rgba(16, 16, 29, 0.9);
+$white-opacity-1: rgba(255, 255, 255, 0.85);
+$white-opacity-2: rgba(255, 255, 255, 0.7);

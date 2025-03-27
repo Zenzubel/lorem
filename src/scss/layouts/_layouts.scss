@@ -8,37 +8,48 @@ body {
   height: 100%;
 }
 
-.content {
+.wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   min-height: 100%;
 }
 
-main {
-  flex-grow: 1;
+.content {
+  flex: 0 1 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
 }
 
 section {
-  --section-padding-top: #{nth($section-padding, 1)};
-  --section-padding-bottom: #{nth($section-padding, 1)};
+  --section-padding-top: $section-padding;
+  --section-padding-top-md: $section-padding-md;
+  --section-padding-top-xs: $section-padding-xs;
+  --section-padding-bottom: $section-padding;
+  --section-padding-bottom-md: $section-padding-md;
+  --section-padding-bottom-xs: $section-padding-xs;
 
   padding-top: var(--section-padding-top);
   padding-bottom: var(--section-padding-bottom);
 
-  @include max-width($breakpoint-lg) {
-    --section-padding-top: #{nth($section-padding-tablet, 1)};
-    --section-padding-bottom: #{nth($section-padding-tablet, 1)};
+  @include min-width($breakpoint-md) {
+    --section-padding-top: var(--section-padding-top-md);
+    --section-padding-bottom: var(--section-padding-bottom-md);
   }
 
-  @include max-width($breakpoint-md) {
-    --section-padding-top: #{nth($section-padding-phone, 1)};
-    --section-padding-bottom: #{nth($section-padding-phone, 1)};
+  @include min-width($breakpoint-xs) {
+    --section-padding-top: var(--section-padding-top-xs);
+    --section-padding-bottom: var(--section-padding-bottom-xs);
   }
 }
 
 .container {
-  --container-padding-native: #{$container-padding-native};
-  --container-max-width-native: #{$container-max-width-native};
+  --container-padding-native: #{$container-padding-md};
+  --container-max-width-native: #{$container-max-width-md};
   --container-padding: 0 var(--container-padding-native);
   --container-max-width: calc(
     var(--container-max-width-native) + (2 * var(--container-padding-native))
@@ -50,43 +61,12 @@ section {
   padding: var(--container-padding);
   margin: 0 auto;
 
-  @include max-width($breakpoint-md) {
-    --container-padding-native: #{$container-padding-mobile-native};
+  @include min-width($breakpoint-md) {
+    --container-max-width-native: #{$container-max-width};
+    --container-padding-native: #{$container-padding};
   }
 
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% + (2 * var(--container-padding-native)));
-    padding: var(--container-padding);
-    margin-left: calc(-1 * var(--container-padding-native));
-
-    @include max-width($breakpoint-lg) {
-      flex-direction: column;
-      justify-content: unset;
-    }
-  }
-
-  &__left {
-    width: 100%;
-    max-width: 60%;
+  &--hidden {
     overflow: hidden;
-
-    @include max-width($breakpoint-lg) {
-      max-width: none;
-      overflow: visible;
-    }
-  }
-
-  &__right {
-    width: 100%;
-    max-width: 40%;
-    margin-left: calc(#{$container-padding-native} * 2);
-
-    @include max-width($breakpoint-lg) {
-      max-width: none;
-      margin-top: 48px;
-      margin-left: 0;
-    }
   }
 }

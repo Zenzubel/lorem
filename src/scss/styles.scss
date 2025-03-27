@@ -17,27 +17,18 @@
 @import 'global/fonts';
 @import 'global/global';
 @import 'global/typography';
-@import 'global/animations';
 @import 'global/scrollbar';
+@import 'global/sections';
 
 // UI - Пользовательский интерфейс
 @import 'ui/button';
-@import 'ui/input';
-@import 'ui/checkbox';
-@import 'ui/radio';
-@import 'ui/switch';
 
 // Components - Компоненты
-@import 'components/dropdown';
-@import 'components/select';
 @import 'components/modal';
-@import 'components/tooltip';
-@import 'components/tabs';
-@import 'components/accordion';
 //
 
 // Sections - Секции
-@import 'sections/hero-slider';
+@import 'sections/hero';
 // @import 'components/modals/example';
 
 // Layouts - Компоновка

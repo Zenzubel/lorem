@@ -1,44 +1,22 @@
 <!DOCTYPE html>
-<html data-theme="light" class="page page--{{ title }}" {{#if isDev }} data-dev {{/if}}>
+<html>
   <head>
     {{> layouts/head }}
 
     <title>{{ title }}</title>
   </head>
   <body>
-    <div class="content">
-      {{> layouts/header }}
-
-      <main>
-        <!-- example -->
-        <section class="example-section">
-          <div class="container">
-            <div class="example">
-              <div class="example__wrap">
-                <div class="example__header">
-                  <h1 class="example__title">
-               aaaaaaaaaaaaa
-                  </h1>
-
-                </div>
-
-                <div class="example__body">
-
-				  </div>
-                </div>
-
-                <div class="example__footer"> </div>
-              </div>
-            </div>
-          </div>
-          <!-- ./ End of container -->
-        </section>
-        <!-- ./ End of example -->
-      </main>
-
+    <div class="wrapper">
+      <div class="content">
+        {{> layouts/header }}
+        <main>
+          <!-- section hero -->
+          {{> components/hero}}
+          <!-- End section hero -->
+        </main>
+      </div>
       {{> layouts/footer }}
     </div>
-
     {{> layouts/modals }}
   </body>
 </html>

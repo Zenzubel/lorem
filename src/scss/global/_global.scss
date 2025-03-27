@@ -1,18 +1,9 @@
 html {
-  color: var(--color-main);
-  background-color: var(--bg-color-main);
+  color: $black;
+  background-color: $white;
   transition-timing-function: $transition-timing-function;
   transition-duration: $transition-duration;
   transition-property: background-color, color;
-
-  // &.transition-theme-animate {
-  //   html,
-  //   body,
-  //   a,
-  //   button {
-  //     transition-duration: 0s !important;
-  //   }
-  // }
 
   &:not(.is-ready) {
     * {
@@ -89,4 +80,8 @@ svg {
     align-items: flex-start;
     transition-property: transform, height;
   }
+}
+
+.text-uppeercase {
+  text-transform: uppercase;
 }
