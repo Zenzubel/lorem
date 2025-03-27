@@ -1,0 +1,129 @@
+* {
+  &::selection {
+    background: var(--primary-disabled-text);
+  }
+}
+
+html {
+  // font-size: calc(16px * var(--zoom, 1)); // --zoom: var(--client-width) / 1920 // для пропорционального адаптива (все размеры в rem)
+
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include max-width($breakpoint-lg) {
+    font-size: 15px;
+  }
+
+  @include max-width($breakpoint-md) {
+    font-size: 14px;
+  }
+}
+
+body {
+  line-height: inherit;
+}
+
+h1,
+.h1 {
+  margin: $h1-margin;
+  font-family: $h1-font;
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+  line-height: $h1-line-height;
+  color: $h1-color;
+
+  @include max-width($breakpoint-md) {
+    font-size: $h1-font-size-sm;
+    line-height: $h1-line-height-sm;
+  }
+}
+h2,
+.h2 {
+  margin: $h2-margin;
+  font-family: $h2-font;
+  font-size: $h2-font-size;
+  font-weight: $h2-font-weight;
+  line-height: $h2-line-height;
+  color: $h2-color;
+
+  @include max-width($breakpoint-md) {
+    font-size: $h2-font-size-sm;
+    line-height: $h2-line-height-sm;
+  }
+}
+h3,
+.h3 {
+  margin: $h3-margin;
+  font-family: $h3-font;
+  font-size: $h3-font-size;
+  font-weight: $h3-font-weight;
+  line-height: $h3-line-height;
+  color: $h3-color;
+
+  @include max-width($breakpoint-md) {
+    font-size: $h3-font-size-sm;
+    line-height: $h3-line-height-sm;
+  }
+}
+h4,
+.h4 {
+  margin: $h4-margin;
+  font-family: $h4-font;
+  font-size: $h4-font-size;
+  font-weight: $h4-font-weight;
+  line-height: $h4-line-height;
+  color: $h4-color;
+
+  @include max-width($breakpoint-md) {
+    font-size: $h4-font-size-sm;
+    line-height: $h4-line-height-sm;
+  }
+}
+h5,
+.h5 {
+  margin: $h5-margin;
+  font-family: $h5-font;
+  font-size: $h5-font-size;
+  font-weight: $h5-font-weight;
+  line-height: $h5-line-height;
+  color: $h5-color;
+
+  @include max-width($breakpoint-md) {
+    font-size: $h5-font-size-sm;
+    line-height: $h5-line-height-sm;
+  }
+}
+h6,
+.h6 {
+  margin: $h6-margin;
+  font-family: $h6-font;
+  font-size: $h6-font-size;
+  font-weight: $h6-font-weight;
+  line-height: $h6-line-height;
+  color: $h6-color;
+
+  @include max-width($breakpoint-md) {
+    font-size: $h6-font-size-sm;
+    line-height: $h6-line-height-sm;
+  }
+}
+
+a,
+.a {
+  --color: var(--primary-2-default);
+  --color-hover: var(--primary-2-hover);
+
+  color: var(--color, inherit);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-hover);
+  }
+}
+
+mark,
+.mark {
+  background-color: var(--primary-disabled);
+}

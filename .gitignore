@@ -1,0 +1,12 @@
+/node_modules/
+/public/
+/dist/
+yarn-error.log
+*.sublime*
+package-lock.json
+yarn.lock
+*.log
+.DS_Store
+.idea
+.vscode
+README.md

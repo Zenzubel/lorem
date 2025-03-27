@@ -1,0 +1,135 @@
+@use 'sass:map';
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin max-width($media) {
+  @media (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin min-width($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin max-height($media) {
+  @media (max-height: $media) {
+    @content;
+  }
+}
+
+@mixin min-height($media) {
+  @media (min-height: $media) {
+    @content;
+  }
+}
+
+@mixin max-width-and-height($media-width, $media-height) {
+  @media (max-width: $media-width) and (max-height: $media-height) {
+    @content;
+  }
+}
+
+@mixin min-width-and-height($media-width, $media-height) {
+  @media (min-width: $media-width) and (min-height: $media-height) {
+    @content;
+  }
+}
+
+@mixin scrollbar($width, $color-thumb, $color-track, $border-radius) {
+  // height: 100%;
+  // overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-thumb;
+    border-radius: $border-radius;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-track;
+    border-radius: $border-radius;
+  }
+
+  scrollbar-color: $color-thumb $color-track;
+  scrollbar-width: thin;
+}
+
+@mixin define-color-RGB($color-name, $value) {
+  $red: red($value);
+  $green: green($value);
+  $blue: blue($value);
+
+  #{$color-name}-rgb: $red, $green, $blue;
+}
+
+@mixin init-css-vars($map: $colors) {
+  @each $theme, $group in $map {
+    @if $theme == 'light' {
+      :root {
+        @include each-css-vars($theme, $group);
+      }
+    } @else {
+      :root[data-theme='#{$theme}'] {
+        @include each-css-vars($theme, $group);
+      }
+    }
+  }
+}
+
+@mixin each-css-vars($theme, $group) {
+  @each $color, $item in $group {
+    @each $key, $value in $item {
+      $name: if($value, '#{$color}-#{$key}', $color);
+      $base-var: '--base-#{$name}';
+      $var: '--#{$name}';
+      $css-value: if($value, $value, $key);
+
+      #{$var}: #{$css-value};
+      #{$var}-rgb: #{hextorgb($css-value)};
+
+      @if $theme == 'light' {
+        #{$base-var}: #{$css-value};
+        #{$base-var}-rgb: #{hextorgb($css-value)};
+      }
+    }
+  }
+}
+
+@mixin font-face($font, $path, $weight) {
+  $map: (
+    100: 'Thin',
+    200: 'ExtraLight',
+    300: 'Light',
+    400: 'Regular',
+    500: 'Medium',
+    600: 'SemiBold',
+    700: 'Bold',
+    800: 'ExtraBold',
+    900: 'Heavy',
+  );
+
+  @font-face {
+    font-family: $font;
+    font-style: normal;
+    font-weight: $weight;
+    src: src-font($font, $path, map.get($map, $weight));
+    font-display: swap;
+  }
+}

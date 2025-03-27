@@ -1,0 +1,48 @@
+// Extensions - Расширения
+@import 'extensions/reset';
+
+// Libs - Библиотеки
+@import 'libs/libs';
+
+// Utils - Утилиты
+@import 'utils/functions';
+@import 'utils/mixins';
+
+// Variables - Переменные
+@import 'variables/colors';
+@import 'variables/variables';
+
+// Global - Глобальное
+@import 'global/root';
+@import 'global/fonts';
+@import 'global/global';
+@import 'global/typography';
+@import 'global/animations';
+@import 'global/scrollbar';
+
+// UI - Пользовательский интерфейс
+@import 'ui/button';
+@import 'ui/input';
+@import 'ui/checkbox';
+@import 'ui/radio';
+@import 'ui/switch';
+
+// Components - Компоненты
+@import 'components/dropdown';
+@import 'components/select';
+@import 'components/modal';
+@import 'components/tooltip';
+@import 'components/tabs';
+@import 'components/accordion';
+//
+
+// Sections - Секции
+@import 'sections/hero-slider';
+// @import 'components/modals/example';
+
+// Layouts - Компоновка
+@import 'layouts/layouts';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Sections - Секции

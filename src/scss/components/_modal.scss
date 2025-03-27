@@ -1,0 +1,131 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: 100vw;
+  height: var(--vh, 100vh);
+  padding: 1.25rem;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 0;
+  text-align: center;
+  white-space: nowrap;
+  visibility: hidden;
+  background-color: rgba(0,0,0, 0.5);
+  opacity: 0;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: opacity, visibility;
+
+  &::before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+
+    .modal {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.modal {
+  position: relative;
+  z-index: 11;
+  display: inline-block;
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  white-space: normal;
+  vertical-align: middle;
+  background-color: white;
+  border-radius: $border-radius;
+  opacity: 0;
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: opacity, transform;
+  transform: scale(0.6);
+
+  &--small {
+    max-width: 35rem;
+  }
+
+  &--medium {
+    max-width: 40rem;
+  }
+
+  &--large {
+    max-width: 80rem;
+  }
+
+  &--no-padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button-close {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    line-height: 1.5;
+    color: gray;
+    text-align: left;
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__icon {
+    width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    margin: auto;
+    font-size: 5rem;
+  }
+
+  &__footer {
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  &__actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .button {
+      margin: 0;
+
+      &:not(:last-of-type) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

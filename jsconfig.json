@@ -1,0 +1,59 @@
+{
+  "baseUrl": ".",
+  "include": ["src/**/*", "tests/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "es2015",
+    "paths": {
+      "@/*": ["./*"],
+      "@": ["./index.js", "./index.json", "./index.scss", "./index.css"],
+      "@src/*": ["src/*"],
+      "@src": ["src/index.js", "src/index.json", "src/index.scss", "src/index.css"],
+      "@img/*": ["src/img/*"],
+      "@img": ["src/img/index.js", "src/img/index.json", "src/img/index.scss", "src/img/index.css"],
+      "@sections/*": ["src/modules/sections/*"],
+      "@sections": [
+        "src/modules/sections/index.js",
+        "src/modules/sections/index.json",
+        "src/modules/sections/index.scss",
+        "src/modules/sections/index.css"
+      ],
+      "@scss/*": ["src/scss/*"],
+      "@scss": [
+        "src/scss/index.js",
+        "src/scss/index.json",
+        "src/scss/index.scss",
+        "src/scss/index.css"
+      ],
+      "@modules/*": ["src/js/modules/*"],
+      "@modules": [
+        "src/js/modules/index.js",
+        "src/js/modules/index.json",
+        "src/js/modules/index.scss",
+        "src/js/modules/index.css"
+      ],
+      "@components/*": ["src/js/components/*"],
+      "@components": [
+        "src/js/components/index.js",
+        "src/js/components/index.json",
+        "src/js/components/index.scss",
+        "src/js/components/index.css"
+      ],
+      "@helpers/*": ["src/js/helpers/*"],
+      "@helpers": [
+        "src/js/helpers/index.js",
+        "src/js/helpers/index.json",
+        "src/js/helpers/index.scss",
+        "src/js/helpers/index.css"
+      ],
+      "@utils/*": ["src/js/utils/*"],
+      "@utils": [
+        "src/js/utils/index.js",
+        "src/js/utils/index.json",
+        "src/js/utils/index.scss",
+        "src/js/utils/index.css"
+      ]
+    }
+  }
+}

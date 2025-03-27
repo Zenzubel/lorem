@@ -1,0 +1,7 @@
+/node_modules/**
+/public/
+/dist/
+.browserlistrc
+jsconfig.json
+/src/scss/extensions/
+/src/scss/libs/

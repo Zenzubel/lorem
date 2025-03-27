@@ -1,0 +1,42 @@
+/* Media */
+$breakpoint-hd: 1920px;
+$breakpoint-2xl: 1600px;
+$breakpoint-xl: 1440px;
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 568px;
+$breakpoint-xxs-3: 375px;
+$breakpoint-xxs-2: 360px;
+$breakpoint-xxs: 320px;
+
+/* Container */
+$container-max-width-native: 1200px;
+$container-padding-native: 16px;
+$container-padding-mobile-native: 14px;
+$container-max-width: calc(#{$container-max-width-native} + (2 * #{$container-padding-native}));
+$container-padding: 0 $container-padding-native;
+
+/* Section */
+$section-padding: 40px 0;
+$section-padding-tablet: 20px 0;
+$section-padding-phone: 15px 0;
+
+/* Fonts */
+// paths
+$fonts-path: '../fonts/';
+$font-path: $fonts-path + 'Roboto/';
+
+// fonts
+$font: 'Roboto';
+$font-fallback: 'Arial';
+
+$main-font: $font, $font-fallback;
+
+/* Global */
+$transition-duration: 0.3s;
+$transition-timing-function: ease;
+$border-radius: 4px;
+
+/* Typography */
+

@@ -1,0 +1,11 @@
+@use 'sass:string';
+
+@function hextorgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@function src-font($font, $path, $weight) {
+  @return local($font + '-' + $weight),
+    url($path + $font + '-' + $weight + '.woff2') format('woff2'),
+    url($path + $font + '-' + $weight + '.woff') format('woff');
+}

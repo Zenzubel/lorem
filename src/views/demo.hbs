@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+  <head>
+    {{> layouts/head }}
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="content">
+      {{> layouts/header }}
+
+      <main>
+        <!-- example -->
+        <section class="example-section">
+          <div class="container">
+            <div class="example">
+              <div class="example__wrap">
+                <div class="example__header">
+                  <h1 class="example__title">
+                    {{ title }}
+                  </h1>
+                </div>
+
+                <div class="example__body">
+                  <form
+                    id="form-test"
+                    style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px"
+                  >
+                    <div class="example-select">
+                      <select
+                        id="select-1"
+                        name="select-name-1"
+                        class="select"
+                        data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": ""}, "svgPath": "svg/sprite.svg"}'
+                      >
+                        <optgroup label="Animals">
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat"> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                        </optgroup>
+                        <optgroup label="Flying pets">
+                          <option value="parrot" disabled> Parrot </option>
+                          <option value="macaw"> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </optgroup>
+                      </select>
+                    </div>
+
+                    <div class="example-select">
+                      <select
+                        id="select-2"
+                        name="select-name-2"
+                        class="select"
+                        data-select='{"placeholder": "Dropdown placeholder"}'
+                        multiple
+                      >
+                        <optgroup label="Animals">
+                          <option value="dog" selected> Dog </option>
+                          <option value="cat"> Cat </option>
+                          <option value="hamster"> Hamster </option>
+                        </optgroup>
+                        <optgroup label="Flying pets">
+                          <option value="parrot"> Parrot </option>
+                          <option value="macaw" disabled> Macaw </option>
+                          <option value="albatross"> Albatross </option>
+                        </optgroup>
+
+                        <option value="parrot2" disabled> Parrot2 </option>
+                        <option value="macaw2"> Macaw2 </option>
+                        <option value="albatross2"> Albatross2 </option>
+                      </select>
+                    </div>
+
+                    <div class="example-select">
+                      <select
+                        id="select-3"
+                        name="select-name-3"
+                        class="select"
+                        data-select='{"placeholder": "Dropdown placeholder", "templateItem": "select-item-default"}'
+                      >
+                        <option
+                          value="parrot"
+                          data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-1", "2": "Parrot", "3": "Parrot text"}'
+                          disabled
+                        >
+                          Parrot
+                        </option>
+                        <option
+                          value="macaw"
+                          data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-2", "2": "Macaw", "3": "Macaw text"}'
+                        >
+                          Macaw
+                        </option>
+                        <option
+                          value="albatross"
+                          data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-3", "2": "Albatross", "3": "Albatross text"}'
+                        >
+                          Albatross
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="example-select">
+                      <select
+                        id="select-4"
+                        name="select-name-4"
+                        class="select"
+                        data-select='{"placeholder": "Dropdown placeholder", "templateItem": "select-item-default", "search": {"enabled": true, "placeholder": "Search", "value": "", "inside": true}}'
+                        multiple
+                      >
+                        <option
+                          value="parrot"
+                          data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-1", "2": "Parrot", "3": "Parrot text"}'
+                          disabled
+                        >
+                          Parrot
+                        </option>
+                        <option
+                          value="macaw"
+                          data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-2", "2": "Macaw", "3": "Macaw text"}'
+                        >
+                          Macaw
+                        </option>
+                        <option
+                          value="albatross"
+                          data-option='{"0": "https://via.placeholder.com/40x40", "1": "option-icon-3", "2": "Albatross", "3": "Albatross text"}'
+                        >
+                          Albatross
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="example-select">
+                      <select
+                        id="select-5"
+                        name="select-name-5"
+                        class="select"
+                        data-select='{"placeholder": "Dropdown placeholder", "search": {"enabled": true, "placeholder": "Search", "value": "", "autofocus": true, "inside": true}}'
+                        multiple
+                      >
+                        <option value="parrot" disabled> Parrot </option>
+                        <option value="macaw"> Macaw </option>
+                        <option value="albatross"> Albatross </option>
+                      </select>
+                    </div>
+
+                    <div class="example-select">
+                      <select
+                        id="select-6"
+                        name="select-name-6"
+                        class="select"
+                        data-select='{"placeholder": "Dropdown placeholder", "selectAllBtn": {"enabled": true, "textSelectAll": "Выбрать все", "textUnselectAll": "Убрать все"}}'
+                        multiple
+                      >
+                        <option value="dog"> Dog </option>
+                        <option value="cat"> Cat </option>
+                        <option value="hamster"> Hamster </option>
+                        <option value="parrot"> Parrot </option>
+                        <option value="macaw" disabled> Macaw </option>
+                        <option value="albatross"> Albatross </option>
+                      </select>
+                    </div>
+
+                    <div style="display: none" class="select-template" id="select-item-default">
+                      <div class="select-template__img-wrapper">
+                        <img src="{0}" alt="{1}" class="select-template__img" />
+                      </div>
+
+                      <div class="select-template__wrap">
+                        <span class="select-template__title">{2}</span>
+                        <p class="select-template__text">{3}</p>
+                      </div>
+                    </div>
+
+                    <button class="button">SUBMIT</button>
+                  </form>
+
+                  <script>
+                    document.getElementById('form-test').addEventListener('submit', function (e) {
+                      e.preventDefault();
+
+                      const data = new FormData(this);
+                      const formatData = {};
+
+                      for (var key of data.entries()) {
+                        // console.log(key[0] + ': ' + key[1]);
+                        if (!formatData[key[0]]) {
+                          formatData[key[0]] = [];
+                        }
+
+                        formatData[key[0]].push(key[1]);
+                      }
+
+                      console.log(formatData);
+                    });
+                  </script>
+
+                  <div style="margin-top: 4rem">
+                    <div class="tabs" data-tabs="test-tabs">
+                      <button class="button button-tab" data-tab="test-tab-1"> tab 1 </button>
+                      <button class="button button-tab" data-tab="test-tab-2"> tab 2 </button>
+                      <button class="button button-tab" data-tab="test-tab-3"> tab 3 </button>
+                    </div>
+
+                    <div class="tabs-contents" data-tabs-contents="test-tabs">
+                      <div class="tab-content" data-tab-content="test-tab-1"> tab content 1 </div>
+                      <div class="tab-content" data-tab-content="test-tab-2">
+                        tab content 2
+
+                        <div style="padding-left: 2rem">
+                          <div class="tabs" data-tabs="test-tabs-2">
+                            <button class="button button-tab" data-tab="test-tab-1">
+                              tab 2-1
+                            </button>
+                            <button class="button button-tab" data-tab="test-tab-2">
+                              tab 2-2
+                            </button>
+                            <button class="button button-tab" data-tab="test-tab-3">
+                              tab 2-3
+                            </button>
+                          </div>
+
+                          <div class="tabs-contents" data-tabs-contents="test-tabs-2">
+                            <div class="tab-content" data-tab-content="test-tab-1">
+                              tab content 2-1
+
+                              <div style="padding-left: 2rem">
+                                <div class="tabs" data-tabs="test-tabs-3">
+                                  <button class="button button-tab" data-tab="test-tab-1">
+                                    tab 3-1
+                                  </button>
+                                  <button class="button button-tab" data-tab="test-tab-2">
+                                    tab 3-2
+                                  </button>
+                                  <button class="button button-tab" data-tab="test-tab-3">
+                                    tab 3-3
+                                  </button>
+                                </div>
+
+                                <div class="tabs-contents" data-tabs-contents="test-tabs-3">
+                                  <div class="tab-content" data-tab-content="test-tab-1">
+                                    tab content 3-1
+                                  </div>
+                                  <div class="tab-content" data-tab-content="test-tab-2">
+                                    tab content 3-2
+                                  </div>
+                                  <div class="tab-content" data-tab-content="test-tab-3">
+                                    tab content 3-3
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-content" data-tab-content="test-tab-2">
+                              tab content 2-2
+                            </div>
+                            <div class="tab-content" data-tab-content="test-tab-3">
+                              tab content 2-3
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-content" data-tab-content="test-tab-3"> tab content 3 </div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 4rem">
+                    <button class="button" data-modal-target="#modal-example">
+                      modal example
+                    </button>
+                  </div>
+
+                  <div style="margin-top: 4rem">
+                    <div style="display: inline-flex; gap: 1rem">
+                      <div class="test__dropdown">
+                        <div id="dropdown" class="dropdown" data-dropdown>
+                          <button class="button dropdown__button j_toggleDropdown">
+                            <span> Dropdown </span>
+                            <div class="dropdown__arrow-wrapper">
+                              {{> ui/svg id="arrow-down" class="dropdown__arrow" }}
+                            </div>
+                          </button>
+                          <div class="dropdown__content"> Dropdown content </div>
+                        </div>
+                      </div>
+
+                      <div class="test__dropdown">
+                        <div
+                          id="dropdown2"
+                          class="dropdown"
+                          data-dropdown='{"popper": true}'
+                        >
+                          <button class="button dropdown__button j_toggleDropdown">
+                            <span> Popper Dropdown </span>
+                            <div class="dropdown__arrow-wrapper">
+                              {{> ui/svg id="arrow-down" class="dropdown__arrow" }}
+                            </div>
+                          </button>
+                          <div class="dropdown__content"> Popper Dropdown content </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 4rem">
+                    <div class="container">
+                      <div class="container__wrap">
+                        <div class="container__left" style="background-color: #ccc">
+                          <div class="test-content" style="min-height: 100px">
+                            container__left
+                          </div>
+                        </div>
+
+                        <div class="container__right" style="background-color: #ddd">
+                          <div class="test-content" style="min-height: 100px">
+                            container__right
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="example__footer"> </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of example -->
+      </main>
+
+      {{> layouts/footer }}
+    </div>
+
+    {{> layouts/modals }}
+  </body>
+</html>

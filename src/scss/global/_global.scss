@@ -1,0 +1,92 @@
+html {
+  color: var(--color-main);
+  background-color: var(--bg-color-main);
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: background-color, color;
+
+  // &.transition-theme-animate {
+  //   html,
+  //   body,
+  //   a,
+  //   button {
+  //     transition-duration: 0s !important;
+  //   }
+  // }
+
+  &:not(.is-ready) {
+    * {
+      transition-duration: 0s !important;
+    }
+  }
+}
+
+picture {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.picture-ratio {
+  --ratio: 100%;
+
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-bottom: var(--ratio);
+    content: '';
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiper-wrapper {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
+.swiper-autoheight {
+  &,
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+}

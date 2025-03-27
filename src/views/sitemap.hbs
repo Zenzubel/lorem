@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}">
+  <head>
+    {{> layouts/head }}
+
+    <title>{{ title }}</title>
+
+    <style>
+      .sitemap__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .sitemap__link {
+        font-size: 2rem;
+        line-height: 1.3;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .sitemap__link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      {{> layouts/header }}
+
+      <main>
+        <!-- sitemap -->
+        <section class="sitemap-section">
+          <div class="container">
+            <h1>{{ title }}</h1>
+            <nav class="sitemap__nav">
+              {{#each views}}
+              {{#with this}}
+              <a class="sitemap__link" href="{{ href }}">
+                {{ name }}
+              </a>
+              {{/with}}
+              {{/each}}
+            </nav>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of sitemap -->
+      </main>
+
+      {{> layouts/footer }}
+    </div>
+
+    {{> layouts/modals }}
+  </body>
+</html>
