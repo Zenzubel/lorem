@@ -1,9 +1,27 @@
 <!-- header -->
 <header class="header">
   <div class="container">
-    <!-- wrap -->
-    <div class="header__wrap"> </div>
-    <!-- ./ End of wrap -->
+    <div class="header__wrap">
+      <div class="header__logo">
+        {{> components/logo src="../svg/logo.svg" href="index.html"}}
+      </div>
+      <div class="header__nav">
+        {{> components/nav
+        link1="#"
+        name1="Бизнес"
+        link2="#"
+        name2="О нас"
+        link3="#"
+        name3="Цены"
+        link4="#"
+        name4="Оформить заказ"}}
+      </div>
+      <div class="header__burger">
+        <button class=" button button--null" data-burger>
+          {{> ui/svg id="burger" }}
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 <!-- ./ End of header -->

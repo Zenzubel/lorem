@@ -1,0 +1,103 @@
+.hero {
+  &__wrapper {
+    position: relative;
+    padding: 120px 0 70px;
+
+    @include min-width($breakpoint-xs) {
+      padding: 150px 0 100px;
+    }
+
+    @include min-width($breakpoint-md) {
+      padding: 202px 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0 0 0 50%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+
+    &.picture {
+      source,
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 400px;
+
+    @include min-width($breakpoint-xs) {
+      gap: 80px;
+      max-width: 500px;
+    }
+
+    @include min-width($breakpoint-sm + 1) {
+      max-width: 780px;
+    }
+  }
+
+  &__title {
+    span {
+      color: $blue-text-2;
+    }
+  }
+
+  &__about {
+    font-size: 18px;
+
+    @include min-width($breakpoint-xs) {
+      font-size: 20px;
+    }
+  }
+
+  &__about-head {
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 10px;
+  }
+
+  &__list-item {
+    $padding-width-native: 24px;
+
+    --padding-width: #{$padding-width-native};
+
+    position: relative;
+    padding-left: var(--padding-width);
+
+    &::before {
+      $width-native: 6px;
+
+      --width: #{$width-native};
+
+      position: absolute;
+      top: 12px;
+      left: calc((var(--padding-width) / 2) - (var(--width) / 2));
+      z-index: 0;
+      width: var(--width);
+      height: 2px;
+      content: '';
+      background-color: $black-bg;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+}

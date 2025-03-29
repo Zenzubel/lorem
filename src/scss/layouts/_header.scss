@@ -1,3 +1,56 @@
-// .header {
+.header {
+  $height-native: 60px;
+  $height-native-md: 100px;
 
-// }
+  --height: #{$height-native};
+  --bg-color: #{$gray-1-opacity};
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: var(--height);
+  background-color: var(--bg-color);
+
+  @include min-width($breakpoint-md) {
+    --height: #{$height-native-md};
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo {
+    margin-right: 20px;
+
+    @include min-width($breakpoint-md) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include min-width($breakpoint-sm + 1) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    svg {
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      min-height: 30px;
+    }
+
+    @include min-width($breakpoint-sm + 1) {
+      display: none;
+    }
+  }
+}

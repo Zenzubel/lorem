@@ -1,0 +1,40 @@
+.nav {
+  &__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    @include min-width($breakpoint-md) {
+      gap: 60px;
+    }
+  }
+
+  &__link {
+    padding: 20px 0;
+    font-size: 13px;
+    color: $white-text;
+    white-space: nowrap;
+    transition-duration: $transition-duration;
+
+    &.active {
+      color: $blue-2;
+
+      @media (hover) {
+        &:hover {
+          color: $blue-2;
+        }
+      }
+    }
+
+    @include min-width($breakpoint-md) {
+      padding: 20px 0;
+      font-size: 13px;
+    }
+
+    @media (hover) {
+      &:hover {
+        color: $blue-2;
+      }
+    }
+  }
+}

@@ -26,30 +26,30 @@ body {
 }
 
 section {
-  --section-padding-top: $section-padding;
-  --section-padding-top-md: $section-padding-md;
-  --section-padding-top-xs: $section-padding-xs;
-  --section-padding-bottom: $section-padding;
-  --section-padding-bottom-md: $section-padding-md;
-  --section-padding-bottom-xs: $section-padding-xs;
+  --section-padding-top: #{$section-padding};
+  --section-padding-top-sm: #{$section-padding-sm};
+  --section-padding-top-md: #{$section-padding-md};
+  --section-padding-bottom: #{$section-padding};
+  --section-padding-bottom-sm: #{$section-padding-sm};
+  --section-padding-bottom-md: #{$section-padding-md};
 
   padding-top: var(--section-padding-top);
   padding-bottom: var(--section-padding-bottom);
+
+  @include min-width($breakpoint-sm) {
+    --section-padding-top: var(--section-padding-top-sm);
+    --section-padding-bottom: var(--section-padding-bottom-sm);
+  }
 
   @include min-width($breakpoint-md) {
     --section-padding-top: var(--section-padding-top-md);
     --section-padding-bottom: var(--section-padding-bottom-md);
   }
-
-  @include min-width($breakpoint-xs) {
-    --section-padding-top: var(--section-padding-top-xs);
-    --section-padding-bottom: var(--section-padding-bottom-xs);
-  }
 }
 
 .container {
-  --container-padding-native: #{$container-padding-md};
-  --container-max-width-native: #{$container-max-width-md};
+  --container-padding-native: #{$container-padding};
+  --container-max-width-native: #{$container-max-width};
   --container-padding: 0 var(--container-padding-native);
   --container-max-width: calc(
     var(--container-max-width-native) + (2 * var(--container-padding-native))
@@ -58,12 +58,12 @@ section {
   width: 100%;
   min-width: 320px;
   max-width: var(--container-max-width);
+  height: 100%;
   padding: var(--container-padding);
   margin: 0 auto;
 
-  @include min-width($breakpoint-md) {
-    --container-max-width-native: #{$container-max-width};
-    --container-padding-native: #{$container-padding};
+  @include min-width($breakpoint-sm) {
+    --container-padding-native: #{$container-padding-sm};
   }
 
   &--hidden {

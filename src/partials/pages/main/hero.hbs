@@ -1,0 +1,32 @@
+<section class="section section--overflow-h section--pd0 hero">
+  <div class="section__wrapper">
+    <div class="hero__wrapper">
+      <picture class="hero__bg picture">
+        <source srcset="img/hero/hero-bg.avif" media="(min-width: 769px)" type="image/avif">
+        <source srcset="img/hero/hero-bg-sm.avif" type="image/avif">
+        <source srcset="img/hero/hero-bg.webp" media="(min-width: 769px)" type="image/webp">
+        <source srcset="img/hero/hero-bg-sm.webp" type="image/webp">
+        <img src="img/hero/hero-bg.jpg" loading="lazy" alt="Фоновое изображение">
+      </picture>
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="h1 hero__title text-uppeercase">
+            <span>Lorem ipsum</span> dolor sit ametconsectetur <span>adipiscing</span>
+          </h1>
+          <div class="hero__about">
+            <div class="hero__about-head">At vero eos et accusamus et iusto odio dignissimos ducimus!</div>
+            <ul class="hero__list">
+              <li class="hero__list-item">Totam rem aperiam eaque ipsa</li>
+              <li class="hero__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+              <li class="hero__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+            </ul>
+          </div>
+          <div class="hero__buttons">
+            {{> ui/button text="заказать" className="text-uppeercase" size="medium"}}            
+            {{> ui/button text="подробнее" mode="white" className="text-uppeercase" size="medium"}}            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

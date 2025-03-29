@@ -18,17 +18,19 @@
 @import 'global/global';
 @import 'global/typography';
 @import 'global/scrollbar';
-@import 'global/sections';
+@import 'global/section';
 
 // UI - Пользовательский интерфейс
 @import 'ui/button';
 
 // Components - Компоненты
 @import 'components/modal';
+@import 'components/nav';
+@import 'components/logo';
 //
 
-// Sections - Секции
-@import 'sections/hero';
+// Pages - Страницы
+@import 'pages/main/hero';
 // @import 'components/modals/example';
 
 // Layouts - Компоновка
