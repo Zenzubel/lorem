@@ -1,6 +1,7 @@
 <button
-  class="button{{#if mode}} button--{{ mode }}{{/if}}{{#if size}} button--{{ size }}{{/if}}{{#if className}} {{className}}{{/if}}"
+  class="button{{#if mode}} button--{{ mode }}{{/if}}{{#if size}} button--{{ size }}{{/if}}{{#if className}} {{className}}{{/if}}" {{#if data}}{{data}}{{/if}}
   type="{{#if type}}{{ type }}{{else}}button{{/if}}"
->
-  {{ text }}
+>  
+  {{#if icon}} {{> ui/svg id=icon }} {{/if}}
+  {{#if text}} <span> {{ text }} </span> {{/if}}
 </button>

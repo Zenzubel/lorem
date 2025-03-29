@@ -12,9 +12,18 @@
   width: 100%;
   height: var(--height);
   background-color: var(--bg-color);
+  transition-duration: $transition-duration;
 
   @include min-width($breakpoint-md) {
     --height: #{$height-native-md};
+  }
+
+  &.active {
+    height: calc(var(--height) - 10px);
+
+    @include min-width($breakpoint-md) {
+      height: calc(var(--height) - 20px);
+    }
   }
 
   &__wrap {

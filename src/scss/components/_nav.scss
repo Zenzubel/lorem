@@ -1,4 +1,26 @@
 .nav {
+  &--mobile {
+    .nav {
+      &__list {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 450px;
+        margin: 20px auto 0;
+      }
+
+      &__item {
+        width: 100%;
+      }
+
+      &__link {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        background-color: $gray-1-opacity;
+      }
+    }
+  }
   &__list {
     display: flex;
     gap: 40px;

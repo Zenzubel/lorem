@@ -1,14 +1,14 @@
 .hero {
   &__wrapper {
     position: relative;
-    padding: 120px 0 70px;
+    padding: 60px 0 70px;
 
     @include min-width($breakpoint-xs) {
-      padding: 150px 0 100px;
+      padding: 90px 0 100px;
     }
 
     @include min-width($breakpoint-md) {
-      padding: 202px 0;
+      padding: 102px 0 202px;
     }
   }
 
@@ -35,6 +35,7 @@
     flex-direction: column;
     gap: 40px;
     max-width: 400px;
+    margin-top: var(--header-height);
 
     @include min-width($breakpoint-xs) {
       gap: 80px;
@@ -53,6 +54,7 @@
   }
 
   &__about {
+    margin-top: 7px;
     font-size: 18px;
 
     @include min-width($breakpoint-xs) {

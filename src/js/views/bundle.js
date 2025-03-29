@@ -11,3 +11,4 @@ import '@modules/_svg';
 // import '@components/Scrollbar';
 // import '@components/Modal';
 import '@components/Mobile-menu';
+import '@components/Header-scroll';

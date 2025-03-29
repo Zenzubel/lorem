@@ -44,11 +44,17 @@ a,
   --color: $white-text;
   --color-hover: $text-hover;
 
-  color: var(--color, inherit);
+  color: var(--color);
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
     color: var(--color-hover);
+  }
+
+  &:visited,
+  &:active,
+  &:focus {
+    color: $white-text;
   }
 }
