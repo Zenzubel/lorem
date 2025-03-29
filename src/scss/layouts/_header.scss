@@ -12,6 +12,7 @@
   width: 100%;
   height: var(--height);
   background-color: var(--bg-color);
+  backdrop-filter: blur(5px);
   transition-duration: $transition-duration;
 
   @include min-width($breakpoint-md) {

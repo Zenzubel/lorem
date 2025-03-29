@@ -1,3 +1,89 @@
-// .footer {
+.footer {
+  $gap-native: 20px;
+  $gap-native-md: 60px;
+  $gap-native-xl: 80px;
 
-// }
+  --gap: #{$gap-native};
+
+  @include min-width($breakpoint-md + 1) {
+    --gap: #{$gap-native-md};
+  }
+
+  @include min-width($breakpoint-xl + 1) {
+    --gap: #{$gap-native-xl};
+  }
+
+  min-height: 50px;
+  padding: 25px 0;
+  background-color: $gray-bg-4;
+
+  @include min-width($breakpoint-sm + 1) {
+    padding: 30px 0;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @include min-width($breakpoint-md + 1) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__copyright {
+    font-size: 10px;
+    color: $white-text;
+    text-align: center;
+
+    @include min-width($breakpoint-sm) {
+      font-size: 13px;
+    }
+
+    @include min-width($breakpoint-md) {
+      text-align: left;
+    }
+  }
+
+  &__pay,
+  &__contacts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    @include min-width($breakpoint-xxs-3 + 1) {
+      flex-direction: row;
+      gap: 25px;
+      justify-content: space-between;
+    }
+
+    @include min-width($breakpoint-md + 1) {
+      &::before {
+        $width-native: 1px;
+
+        --width: #{$width-native};
+
+        position: absolute;
+        top: 50%;
+        left: calc(-1 * ((var(--gap) / 2) + (var(--width) / 2)));
+        z-index: 0;
+        width: var(--width);
+        height: 18px;
+        content: '';
+        background-color: $gray-5;
+        transform: translateY(-50%);
+      }
+    }
+
+    @include min-width($breakpoint-xl) {
+      gap: 38px;
+    }
+  }
+}

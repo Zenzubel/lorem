@@ -41,15 +41,13 @@ body {
 
 a,
 .a {
-  --color: $white-text;
-  --color-hover: $text-hover;
-
   color: var(--color);
   text-decoration: none;
   cursor: pointer;
+  transition-duration: $transition-duration;
 
   &:hover {
-    color: var(--color-hover);
+    color: $text-hover;
   }
 
   &:visited,

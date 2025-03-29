@@ -1,0 +1,24 @@
+.contacts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: $white-text;
+  white-space: nowrap;
+
+  svg {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    transition-duration: $transition-duration;
+    transform: translateX(0);
+  }
+
+  @media (hover) {
+    &:hover {
+      svg {
+        transform: translateX(-3px);
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.pay {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  color: $gray-text-3;
+  white-space: nowrap;
+
+  svg {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+  }
+}

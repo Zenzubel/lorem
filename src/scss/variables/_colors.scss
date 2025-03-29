@@ -10,8 +10,8 @@ $gray-2-native: #2a2b30;
 $gray-3-native: #6f6d7b;
 $gray-4-native: #272733;
 $gray-5-native: #c4c4c4;
-$gray-5-native: #c3c3c3;
-$gray-6-native: #3d4050;
+$gray-6-native: #c3c3c3;
+$gray-7-native: #3d4050;
 
 // blue
 $blue-1: #{$blue-1-native};
@@ -25,7 +25,8 @@ $gray-2: #{$gray-2-native};
 $gray-3: #{$gray-3-native};
 $gray-4: #{$gray-4-native};
 $gray-5: #{$gray-5-native};
-$gray-6: #{$gray-6-native};
+$gray-6: #{$gray-5-native};
+$gray-7: #{$gray-7-native};
 
 // bg
 $white-bg: $white;
@@ -34,7 +35,8 @@ $blue-bg: $blue-1;
 $gray-bg-1: $gray-3;
 $gray-bg-2: $gray-4;
 $gray-bg-3: $gray-5;
-$gray-bg-4: $gray-6;
+$gray-bg-4: $gray-7;
+$gray-bg-5: $gray-6;
 $gray-rgba: $gray-1;
 $white-rgba: $white;
 
@@ -45,6 +47,7 @@ $blue-text-1: $blue-2;
 $blue-text-2: $blue-1;
 $gray-text-1: $gray-2;
 $gray-text-2: $gray-4;
+$gray-text-3: $gray-6;
 
 // link hover
 $text-hover: $blue-2;

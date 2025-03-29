@@ -1,9 +1,18 @@
 <!-- footer -->
 <footer class="footer">
   <div class="container">
-    <!-- wrap -->
-    <div class="footer__wrap"> </div>
-    <!-- ./ End of wrap -->
+    <div class="footer__wrap">
+      <div class="footer__copyright">© 2018 <span class="text-uppercase">«LoremIpsum.net»</span> Все права защищены.</div>
+      <div class="footer__pay">
+        {{> components/pay icon="qiwi-wallet" name="Qiwi wallet"}}
+        {{> components/pay icon="yandex-money" name="Yandex Money"}}
+        {{> components/pay icon="web-money" name="Web Money"}}
+      </div>
+      <div class="footer__contacts">
+        {{> components/contacts icon="mail" name="info@ipsum228.com" link="mailto:info@ipsum228.com"}}
+        {{> components/contacts icon="vkontakte" name="Мы вконтакте" link="#"}}
+      </div>
+    </div>
   </div>
 </footer>
 <!-- ./ End of footer -->
