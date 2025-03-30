@@ -39,6 +39,31 @@ body {
   }
 }
 
+.h2 {
+  --font-size: #{$h2-font-size};
+  --font-size-md: #{$h2-font-size-md};
+  --font-size-sm: #{$h2-font-size-sm};
+  --font-size-xs: #{$h2-font-size-xs};
+
+  font-family: $h2-font;
+  font-size: var(--font-size);
+  font-weight: $h2-font-weight;
+  line-height: $h2-line-height;
+  color: $h2-color;
+
+  @include min-width($breakpoint-xs) {
+    --font-size: #{$h2-font-size-xs};
+  }
+
+  @include min-width($breakpoint-sm + 1) {
+    --font-size: #{$h2-font-size-sm};
+  }
+
+  @include min-width($breakpoint-md) {
+    --font-size: #{$h2-font-size-md};
+  }
+}
+
 a,
 .a {
   color: var(--color);

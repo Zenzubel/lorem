@@ -30,10 +30,10 @@
 @import 'components/mobile-menu';
 @import 'components/pay';
 @import 'components/contacts';
+@import 'components/scheme';
+@import 'components/scheme-item';
 //
 
-// Pages - Страницы
-@import 'pages/main/hero';
 // @import 'components/modals/example';
 
 // Layouts - Компоновка
@@ -42,3 +42,5 @@
 @import 'layouts/footer';
 
 // Sections - Секции
+@import 'pages/main/hero';
+@import 'pages/main/order';

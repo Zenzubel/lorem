@@ -87,3 +87,31 @@ svg {
 .text-uppercase {
   text-transform: uppercase;
 }
+
+.text-blue {
+  color: $blue-text-2;
+}
+
+.picture-bg {
+  position: absolute;
+  inset: 0 0 0 50%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+
+  &.picture {
+    source,
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &--zindex {
+    &-0 {
+      z-index: 0;
+    }
+  }
+}

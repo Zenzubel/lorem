@@ -1,0 +1,22 @@
+.order {
+  position: relative;
+  background-color: $gray-bg-2;
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: $white-text;
+  }
+
+  &__subtitle {
+    color: $gray-text-4;
+  }
+}

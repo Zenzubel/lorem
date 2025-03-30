@@ -12,6 +12,7 @@ $gray-4-native: #272733;
 $gray-5-native: #c4c4c4;
 $gray-6-native: #c3c3c3;
 $gray-7-native: #3d4050;
+$gray-8-native: #bbb;
 
 // blue
 $blue-1: #{$blue-1-native};
@@ -27,6 +28,7 @@ $gray-4: #{$gray-4-native};
 $gray-5: #{$gray-5-native};
 $gray-6: #{$gray-5-native};
 $gray-7: #{$gray-7-native};
+$gray-8: #{$gray-8-native};
 
 // bg
 $white-bg: $white;
@@ -48,6 +50,7 @@ $blue-text-2: $blue-1;
 $gray-text-1: $gray-2;
 $gray-text-2: $gray-4;
 $gray-text-3: $gray-6;
+$gray-text-4: $gray-8;
 
 // link hover
 $text-hover: $blue-2;

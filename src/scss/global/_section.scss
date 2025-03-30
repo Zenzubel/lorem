@@ -1,6 +1,12 @@
 .section {
-  &--pd0 {
-    padding: 0;
+  &--pd {
+    &-0 {
+      padding: 0;
+    }
+
+    &-1 {
+      padding: 120px 0 150px;
+    }
   }
 
   &--overflow-h {

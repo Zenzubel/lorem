@@ -1,0 +1,47 @@
+.scheme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 450px;
+  margin: 0 auto;
+
+  @include min-width($breakpoint-md) {
+    flex-direction: row;
+    gap: 0;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &__dotes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 0;
+
+    @include min-width($breakpoint-md) {
+      flex-direction: row;
+      gap: 18px;
+      padding: 0 12px;
+    }
+
+    @include min-width($breakpoint-lg) {
+      gap: 26px;
+      padding: 0 16px;
+    }
+
+    svg {
+      width: 6px;
+      min-width: 6px;
+      height: 6px;
+      min-height: 6px;
+
+      @include min-width($breakpoint-lg) {
+        width: 6px;
+        min-width: 6px;
+        height: 6px;
+        min-height: 6px;
+      }
+    }
+  }
+}

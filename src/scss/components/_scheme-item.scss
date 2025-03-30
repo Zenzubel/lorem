@@ -1,0 +1,63 @@
+.scheme-item {
+  $size-native: 80px;
+  $size-native-lg: 100px;
+
+  --size: #{$size-native};
+
+  @include min-width($breakpoint-md) {
+    position: relative;
+    display: block;
+  }
+
+  @include min-width($breakpoint-lg) {
+    --size: #{$size-native-lg};
+  }
+
+  &__circle {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto 10px;
+    background-color: $blue-bg;
+    border: 5px solid $blue-3;
+    border-radius: 50%;
+
+    @include min-width($breakpoint-lg) {
+      margin: 0 auto;
+    }
+
+    svg {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      min-height: 40px;
+
+      @include min-width($breakpoint-lg) {
+        width: 55px;
+        min-width: 55px;
+        height: 55px;
+        min-height: 55px;
+      }
+    }
+  }
+
+  &__text {
+    position: static;
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: $white-text;
+
+    @include min-width($breakpoint-md) {
+      position: absolute;
+      top: calc(var(--size) + 20px);
+      left: 50%;
+      width: 182px;
+      font-size: 16px;
+      transform: translateX(-50%);
+    }
+  }
+}
