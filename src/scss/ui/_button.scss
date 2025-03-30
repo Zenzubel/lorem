@@ -93,9 +93,17 @@ button {
     }
   }
 
+  &--long,
   &--medium {
     width: 100%;
+  }
+
+  &--medium {
     max-width: 183px;
+  }
+
+  &--long {
+    max-width: 370px;
   }
 
   &--white {

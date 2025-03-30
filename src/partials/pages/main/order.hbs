@@ -12,6 +12,33 @@
             <p class="order__subtitle">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
           </div>
           {{> components/scheme}}
+          <form id="myForm" class="order__form form" action="#">
+            <div class="order__form-row">
+              <div class="form__item">
+                <label class="label" for="email">
+                  <input id="email" class="input" type="email" placeholder="Ваш e-mail">
+                </label>
+              </div>
+              <div class="form__item">
+                <label class="label" for="name">
+                  <input id="name" class="input" type="name" placeholder="Ваше имя">
+                </label>
+              </div>
+            </div>
+            <div class="order__form-row">
+              {{> components/range}}
+              <div class="form__file">
+                <label class="label label--file" for="file">
+                  <input id="file" class="input input--file" type="file"
+                    accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
+                    multiple>
+                  {{> ui/svg id="paper"}}
+                  <span class="text-uppercase">Прикрепить файл</span>
+                </label>
+              </div>
+            </div>
+            {{> ui/button text="Отправить" className="text-uppercase" size="long" type="submit"}}
+          </form>
         </div>
       </div>
     </div>

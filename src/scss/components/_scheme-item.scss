@@ -47,7 +47,9 @@
   &__text {
     position: static;
     max-width: 280px;
+    max-height: 42px;
     margin: 0 auto;
+    overflow: hidden;
     font-size: 14px;
     color: $white-text;
 

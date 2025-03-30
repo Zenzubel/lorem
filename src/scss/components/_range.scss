@@ -1,0 +1,60 @@
+.range {
+  &__head {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $white-text;
+
+    :first-child {
+      text-align: left;
+    }
+
+    @include min-width($breakpoint-sm + 1) {
+      font-size: 18px;
+    }
+  }
+
+  &__value {
+    :last-child {
+      margin-left: 5px;
+    }
+  }
+  .noUi-target {
+    padding: 0 24px 0 0;
+    background: $white-opacity-2;
+    border: 1px solid $white;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  .noUi-horizontal {
+    height: 6px;
+    margin-top: 20px;
+  }
+  .noUi-connect {
+    background-color: $white;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    $size-native: 24px;
+
+    --size: #{$size-native};
+
+    top: -50%;
+    right: calc(-1 * var(--size) - 2px);
+    width: calc(var(--size) + 4px);
+    height: calc(var(--size) + 4px);
+    cursor: pointer;
+    background-color: $blue-bg-2;
+    border: 3px solid $blue-3;
+    border-radius: 50%;
+    box-shadow: none;
+    transform: translateY(-43%);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

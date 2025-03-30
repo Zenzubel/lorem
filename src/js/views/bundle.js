@@ -5,6 +5,7 @@ import '@scss/styles.scss';
 import '@modules/_svg';
 
 // modules
+import '@modules/nouislider';
 // import '@modules/slider';
 
 // components
@@ -12,3 +13,4 @@ import '@modules/_svg';
 // import '@components/Modal';
 import '@components/Mobile-menu';
 import '@components/Header-scroll';
+import '@components/Input-focus';

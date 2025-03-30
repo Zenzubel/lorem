@@ -1,0 +1,127 @@
+.input {
+  $color: $gray-text-2;
+  $color-placeholder: $gray-text-2;
+  $border-color: $white;
+  $border-color-hover: $white;
+  $border-color-focus: $blue-4;
+  $background-color: $white-opacity-1;
+
+  padding: $input-padding;
+  overflow: hidden;
+  font-family: $input-font;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: solid;
+  border-width: $input-border-width;
+  border-radius: $input-border-radius;
+  outline: transparent;
+  appearance: none;
+  transition: $input-transition;
+
+  &::placeholder {
+    font-family: $input-font;
+    font-size: $input-font-size;
+    font-weight: 300;
+    line-height: $input-line-height;
+    color: $color-placeholder;
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  @media (hover) {
+    &:hover {
+      border-color: $border-color-hover;
+    }
+  }
+
+  &:focus {
+    border-color: $border-color-focus;
+    outline: none;
+
+    &::placeholder {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  &:read-only {
+    cursor: default;
+    box-shadow: none;
+    opacity: 0.7;
+
+    @media (hover) {
+      &:hover {
+        border-color: $border-color;
+      }
+
+      &:focus {
+        border-color: $border-color;
+
+        &::placeholder {
+          opacity: 1;
+          transform: unset;
+        }
+      }
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    $border-color: $gray-4;
+  }
+
+  &--file {
+    position: absolute;
+    z-index: -1;
+    width: 0.4px;
+    height: 0.4px;
+    overflow: hidden;
+    opacity: 0;
+
+    &:read-only {
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+.label {
+  $color: $gray-text-2;
+
+  position: relative;
+
+  &--file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 370px;
+    height: 48px;
+    padding: 9px 15px;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: $white-bg;
+    border: 1px solid $blue-1;
+    border-radius: $input-border-radius;
+
+    svg {
+      width: 18px;
+      min-width: 18px;
+      height: 20px;
+      min-height: 20px;
+      margin-right: 10px;
+    }
+
+    span {
+      color: $color;
+    }
+
+    &:focus,
+    &.focus {
+      border: 1px solid $blue-3;
+    }
+  }
+}

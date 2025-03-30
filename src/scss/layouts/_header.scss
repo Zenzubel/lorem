@@ -5,6 +5,10 @@
   --height: #{$height-native};
   --bg-color: #{$gray-1-opacity};
 
+  @include min-width($breakpoint-md) {
+    --height: #{$height-native-md};
+  }
+
   position: fixed;
   top: 0;
   left: 0;
@@ -14,10 +18,6 @@
   background-color: var(--bg-color);
   backdrop-filter: blur(5px);
   transition-duration: $transition-duration;
-
-  @include min-width($breakpoint-md) {
-    --height: #{$height-native-md};
-  }
 
   &.active {
     height: calc(var(--height) - 10px);
