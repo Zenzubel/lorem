@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    
+    <!-- defaults -->
+    <script>
+      window.modalDefaults = {};
+    
+      window.dropdownDefaults = {};
+    
+      window.selectDefaults = {};
+    </script>
+
+    <title>index</title>
+  <script src="js/_head.js"></script><link href="css/bundle.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <!-- header -->
+        <header class="header" data-scroll-header>
+          <div class="container">
+            <div class="header__wrap">
+              <div class="header__logo">
+                <a href="index.html" class="logo">
+                    <img src="../svg/logo.svg" alt="Логотип">
+                </a>      </div>
+              <div class="header__nav">
+                <nav class="nav">
+                  <ul class="nav__list" aria-labe="Меню">
+                    <li class="nav__item">
+                      <a href="#" class="nav__link text-uppercase active">
+                        Бизнес
+                      </a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link text-uppercase">
+                        О нас
+                      </a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link text-uppercase">
+                        Цены
+                      </a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link text-uppercase">
+                        Оформить заказ
+                      </a>
+                    </li>
+                  </ul>
+                </nav>      </div>
+              <div class="header__burger">
+                <button class=" button button--null" data-burger>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#burger"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- ./ End of header -->        <main>
+          <!-- section hero -->
+          <div class="mobile-menu" data-mobile-menu>
+            <button
+              class="button button--null mobile-menu__close" data-close-mobile-menu
+              type="button"
+            >  
+               <svg class="svg " >
+              <use xlink:href="svg/sprite.svg#close"></use>
+            </svg>
+             
+              
+            </button>
+            <nav class="nav nav--mobile">
+              <ul class="nav__list" aria-labe="Меню">
+                <li class="nav__item">
+                  <a href="#" class="nav__link text-uppercase active">
+                    Бизнес
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link text-uppercase">
+                    О нас
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link text-uppercase">
+                    Цены
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link text-uppercase">
+                    Оформить заказ
+                  </a>
+                </li>
+              </ul>
+            </nav></div>          <section class="section section--overflow-h section--pd-0 hero">
+            <div class="section__wrapper">
+              <div class="hero__wrapper">
+                <picture class="hero__bg picture picture-bg">
+                  <source srcset="img/hero/hero-bg.avif" media="(min-width: 769px)" type="image/avif">
+                  <source srcset="img/hero/hero-bg-sm.avif" type="image/avif">
+                  <source srcset="img/hero/hero-bg.webp" media="(min-width: 769px)" type="image/webp">
+                  <source srcset="img/hero/hero-bg-sm.webp" type="image/webp">
+                  <img src="img/hero/hero-bg.jpg" loading="lazy" alt="Фоновое изображение">
+                </picture>
+                <div class="container">
+                  <div class="hero__content">
+                    <h1 class="h1 hero__title text-uppercase">
+                      <span class="text-blue">Lorem ipsum</span> dolor sit ametconsectetur <span class="text-blue">adipiscing</span>
+                    </h1>
+                    <div class="hero__about">
+                      <div class="hero__about-head">At vero eos et accusamus et iusto odio dignissimos ducimus!</div>
+                      <ul class="hero__list">
+                        <li class="hero__list-item">Totam rem aperiam eaque ipsa</li>
+                        <li class="hero__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+                        <li class="hero__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+                      </ul>
+                    </div>
+                    <div class="hero__buttons">
+                      <button
+                        class="button button--production button--medium text-uppercase" 
+                        type="button"
+                      >  
+                        
+                         <span> заказать </span> 
+                      </button>
+                      <button
+                        class="button button--white button--medium text-uppercase" 
+                        type="button"
+                      >  
+                        
+                         <span> подробнее </span> 
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>          <section class="section section--overflow-h section--pd-1 order">
+            <picture class="order__bg picture picture-bg picture-bg--zindex-0">
+              <source srcset="img/order/map-bg.avif" type="image/avif">
+              <img src="img/order/map-bg.jpg" loading="lazy" alt="Фоновое изображение">
+            </picture>
+            <div class="section__wrapper">
+              <div class="order__wrapper">
+                <div class="container">
+                  <div class="order__content">
+                    <div class="order__heading">
+                      <h2 class="h2 order__title text-uppercase">Оформление <span class="text-blue">Заказа</span></h2>
+                      <p class="order__subtitle">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
+                    </div>
+                    <div class="scheme">
+                      <div class="scheme__item">
+                        <div class="scheme-item">
+                          <div class="scheme-item__circle">
+                            <svg class="svg " >
+                              <use xlink:href="svg/sprite.svg#search"></use>
+                            </svg>
+                          </div>
+                          <div class="scheme-item__text">
+                            Lorem ipsum dolor sit amet
+                          </div>
+                        </div>  </div>
+                      <div class="scheme__dotes">
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                      </div>
+                      <div class="scheme__item">
+                        <div class="scheme-item">
+                          <div class="scheme-item__circle">
+                            <svg class="svg " >
+                              <use xlink:href="svg/sprite.svg#percent"></use>
+                            </svg>
+                          </div>
+                          <div class="scheme-item__text">
+                            Сonsecteturadipiscing elit
+                          </div>
+                        </div>  </div>
+                      <div class="scheme__dotes">
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                      </div>
+                      <div class="scheme__item">
+                        <div class="scheme-item">
+                          <div class="scheme-item__circle">
+                            <svg class="svg " >
+                              <use xlink:href="svg/sprite.svg#file"></use>
+                            </svg>
+                          </div>
+                          <div class="scheme-item__text">
+                            Sed do eiusmod tempor
+                          </div>
+                        </div>  </div>
+                      <div class="scheme__dotes">
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                      </div>
+                      <div class="scheme__item">
+                        <div class="scheme-item">
+                          <div class="scheme-item__circle">
+                            <svg class="svg " >
+                              <use xlink:href="svg/sprite.svg#message"></use>
+                            </svg>
+                          </div>
+                          <div class="scheme-item__text">
+                            Esse cillum dolore eu fugiat
+                          </div>
+                        </div>  </div>
+                      <div class="scheme__dotes">
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                        <svg class="svg " >
+                          <use xlink:href="svg/sprite.svg#dot"></use>
+                        </svg>
+                      </div>
+                      <div class="scheme__item">
+                        <div class="scheme-item">
+                          <div class="scheme-item__circle">
+                            <svg class="svg " >
+                              <use xlink:href="svg/sprite.svg#money"></use>
+                            </svg>
+                          </div>
+                          <div class="scheme-item__text">
+                            Excepteur sint occaecat cupidatat non proident
+                          </div>
+                        </div>  </div>
+                    </div>          <form id="myForm" class="order__form form" action="#">
+                      <div class="order__form-row">
+                        <div class="order__form-item">
+                          <div class="select-custom" data-select-custom>
+                            <button class="select-custom__trigger" type="button" data-trigger="Выберите тип системы"></button>
+                            <ul class="select-custom__options simplebar" data-options>
+                              <li class="select-custom__option" data-value="Sed ut perspiciatis"></li>
+                              <li class="select-custom__option" data-value="Nemo enim ipsam"></li>
+                              <li class="select-custom__option" data-value="Et harum quidem"></li>
+                              <li class="select-custom__option" data-value="Temporibus autem"></li>
+                              <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                              <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                              <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                              <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="order__form-item">
+                          <label class="label" for="email">
+                            <input id="email" class="input" type="email" placeholder="Ваш e-mail">
+                          </label>
+                        </div>
+                        <div class="order__form-item">
+                          <label class="label" for="name">
+                            <input id="name" class="input" type="name" placeholder="Ваше имя">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="order__form-row">
+                        <div class="range" data-range>
+                          <div class="range__head">
+                            <span class="range__text">Sed ut perspiciatis, unde omnis iste natus</span>
+                            <span id="range-value" class="range__value" data-num-id="num"></span>
+                          </div>
+                          <div id="range-rail" class=""></div>
+                        </div>              <div class="form__file">
+                          <label class="label label--file" for="file">
+                            <input id="file" class="input input--file" type="file"
+                              accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
+                              multiple>
+                            <svg class="svg " >
+                              <use xlink:href="svg/sprite.svg#paper"></use>
+                            </svg>
+                            <span class="text-uppercase">Прикрепить файл</span>
+                          </label>
+                        </div>
+                      </div>
+                      <button
+                        class="button button--production button--long text-uppercase" 
+                        type="submit"
+                      >  
+                        
+                         <span> Отправить </span> 
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>          <!-- End section hero -->
+        </main>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrap">
+            <div class="footer__copyright">© 2018 <span class="text-uppercase">«LoremIpsum.net»</span> Все права защищены.</div>
+            <div class="footer__pay">
+              <div class="pay">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#qiwi-wallet"></use>
+                  </svg>
+                </span>
+                <span>Qiwi wallet</span>
+              </div>        <div class="pay">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#yandex-money"></use>
+                  </svg>
+                </span>
+                <span>Yandex Money</span>
+              </div>        <div class="pay">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#web-money"></use>
+                  </svg>
+                </span>
+                <span>Web Money</span>
+              </div>      </div>
+            <div class="footer__contacts">
+              <a href=link class="contacts">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#mail"></use>
+                  </svg>
+                </span>
+                <span>info@ipsum228.com</span>
+              </a>        <a href=link class="contacts">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#vkontakte"></use>
+                  </svg>
+                </span>
+                <span>Мы вконтакте</span>
+              </a>      </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ./ End of footer -->
+    </div>
+    <!-- Modals -->
+    <div id="modal-example" class="modal-wrapper modal-wrapper--example" data-modal>
+      <div class="modal">
+        <div class="modal__wrap">
+          <div class="modal__header"> Test modal title </div>
+    
+          <div class="modal__body">
+            <div class="modal__content">
+              <p class="modal__text"> Lorem ipsum dolor sit amet consectetur. </p>
+              <p class="modal__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusamus?
+              </p>
+              <p class="modal__text"> Lorem ipsum dolor sit. </p>
+            </div>
+          </div>
+    
+          <div class="modal__footer">
+            <p class="modal__text"> Test modal footer </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./ End of Modals -->
+  <script src="js/bundle.js"></script><script src="js/index.js"></script></body>
+</html>

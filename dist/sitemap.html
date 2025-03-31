@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--sitemap">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    
+    <!-- defaults -->
+    <script>
+      window.modalDefaults = {};
+    
+      window.dropdownDefaults = {};
+    
+      window.selectDefaults = {};
+    </script>
+
+    <title>sitemap</title>
+
+    <style>
+      .sitemap__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .sitemap__link {
+        font-size: 2rem;
+        line-height: 1.3;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .sitemap__link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  <script src="js/_head.js"></script><link href="css/bundle.css" rel="stylesheet"></head>
+  <body>
+    <div class="content">
+      <!-- header -->
+      <header class="header" data-scroll-header>
+        <div class="container">
+          <div class="header__wrap">
+            <div class="header__logo">
+              <a href="index.html" class="logo">
+                  <img src="../svg/logo.svg" alt="Логотип">
+              </a>      </div>
+            <div class="header__nav">
+              <nav class="nav">
+                <ul class="nav__list" aria-labe="Меню">
+                  <li class="nav__item">
+                    <a href="#" class="nav__link text-uppercase active">
+                      Бизнес
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link text-uppercase">
+                      О нас
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link text-uppercase">
+                      Цены
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link text-uppercase">
+                      Оформить заказ
+                    </a>
+                  </li>
+                </ul>
+              </nav>      </div>
+            <div class="header__burger">
+              <button class=" button button--null" data-burger>
+                <svg class="svg " >
+                  <use xlink:href="svg/sprite.svg#burger"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ./ End of header -->
+      <main>
+        <!-- sitemap -->
+        <section class="sitemap-section">
+          <div class="container">
+            <h1>sitemap</h1>
+            <nav class="sitemap__nav">
+              <a class="sitemap__link" href="./index.html">
+                index
+              </a>
+            </nav>
+          </div>
+          <!-- ./ End of container -->
+        </section>
+        <!-- ./ End of sitemap -->
+      </main>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrap">
+            <div class="footer__copyright">© 2018 <span class="text-uppercase">«LoremIpsum.net»</span> Все права защищены.</div>
+            <div class="footer__pay">
+              <div class="pay">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#qiwi-wallet"></use>
+                  </svg>
+                </span>
+                <span>Qiwi wallet</span>
+              </div>        <div class="pay">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#yandex-money"></use>
+                  </svg>
+                </span>
+                <span>Yandex Money</span>
+              </div>        <div class="pay">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#web-money"></use>
+                  </svg>
+                </span>
+                <span>Web Money</span>
+              </div>      </div>
+            <div class="footer__contacts">
+              <a href=link class="contacts">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#mail"></use>
+                  </svg>
+                </span>
+                <span>info@ipsum228.com</span>
+              </a>        <a href=link class="contacts">
+                <span>
+                  <svg class="svg " >
+                    <use xlink:href="svg/sprite.svg#vkontakte"></use>
+                  </svg>
+                </span>
+                <span>Мы вконтакте</span>
+              </a>      </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ./ End of footer -->
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-example" class="modal-wrapper modal-wrapper--example" data-modal>
+      <div class="modal">
+        <div class="modal__wrap">
+          <div class="modal__header"> Test modal title </div>
+    
+          <div class="modal__body">
+            <div class="modal__content">
+              <p class="modal__text"> Lorem ipsum dolor sit amet consectetur. </p>
+              <p class="modal__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusamus?
+              </p>
+              <p class="modal__text"> Lorem ipsum dolor sit. </p>
+            </div>
+          </div>
+    
+          <div class="modal__footer">
+            <p class="modal__text"> Test modal footer </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./ End of Modals -->
+  <script src="js/bundle.js"></script><script src="js/index.js"></script></body>
+</html>
