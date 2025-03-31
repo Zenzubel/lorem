@@ -14,12 +14,27 @@
           {{> components/scheme}}
           <form id="myForm" class="order__form form" action="#">
             <div class="order__form-row">
-              <div class="form__item">
+              <div class="order__form-item">
+                <div class="select-custom" data-select-custom>
+                  <button class="select-custom__trigger" type="button" data-trigger="Выберите тип системы"></button>
+                  <ul class="select-custom__options simplebar" data-options>
+                    <li class="select-custom__option" data-value="Sed ut perspiciatis"></li>
+                    <li class="select-custom__option" data-value="Nemo enim ipsam"></li>
+                    <li class="select-custom__option" data-value="Et harum quidem"></li>
+                    <li class="select-custom__option" data-value="Temporibus autem"></li>
+                    <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                    <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                    <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                    <li class="select-custom__option" data-value="Itaque earum rerum"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order__form-item">
                 <label class="label" for="email">
                   <input id="email" class="input" type="email" placeholder="Ваш e-mail">
                 </label>
               </div>
-              <div class="form__item">
+              <div class="order__form-item">
                 <label class="label" for="name">
                   <input id="name" class="input" type="name" placeholder="Ваше имя">
                 </label>

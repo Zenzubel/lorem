@@ -51,23 +51,23 @@
   }
 }
 
-@mixin scrollbar($width, $color-thumb, $color-track, $border-radius) {
+@mixin scrollbar($scrollbar-width, $color-thumb, $color-track, $scrollbar-border-radius) {
   // height: 100%;
   // overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: $width;
+    width: #{$scrollbar-width};
   }
   &::-webkit-scrollbar-thumb {
-    background: $color-thumb;
-    border-radius: $border-radius;
+    background: #{$color-thumb};
+    border-radius: #{$scrollbar-border-radius};
   }
   &::-webkit-scrollbar-track {
-    background: $color-track;
-    border-radius: $border-radius;
+    background: #{$color-track};
+    border-radius: #{$scrollbar-border-radius};
   }
 
-  scrollbar-color: $color-thumb $color-track;
+  scrollbar-color: #{$color-thumb $color-track};
   scrollbar-width: thin;
 }
 

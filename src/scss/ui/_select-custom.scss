@@ -1,0 +1,141 @@
+.select-custom {
+  --height: 48px;
+
+  $input-font-size-native: #{$input-font-size};
+  $input-font-size-native-sm: #{$input-font-size-sm};
+
+  --input-font-size: #{$input-font-size-native};
+
+  $color: $gray-text-2;
+  $color-placeholder: $gray-text-2;
+  $border-color: $white;
+  $border-color-hover: $white;
+  $border-color-focus: $blue-4;
+  $background-color: $white-opacity-1;
+  $background-color-focus: $gray-bg-4;
+  $background-color-list: $gray-bg-2;
+
+  @include min-width($breakpoint-md + 1) {
+    --input-font-size: #{$input-font-size-native-sm};
+  }
+
+  position: relative;
+  width: 100%;
+
+  &.active {
+    .select-custom {
+      background-color: $background-color;
+      &__trigger {
+        color: $white-text;
+        background-color: $background-color-focus;
+        border-color: $background-color-focus;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        &::after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' fill='none'%3E%3Cpath fill='%23fff' d='M14.934 12.348a.307.307 0 0 1-.09.206l-.446.446a.308.308 0 0 1-.205.09.308.308 0 0 1-.206-.09l-3.509-3.509-3.509 3.51a.308.308 0 0 1-.205.088A.29.29 0 0 1 6.56 13l-.447-.446a.307.307 0 0 1-.089-.206c0-.071.036-.151.09-.205l4.16-4.16a.308.308 0 0 1 .205-.09c.072 0 .152.036.206.09l4.16 4.16c.054.054.09.134.09.205Z' /%3E%3C/svg%3E");
+          transform: translateY(-50%) rotate(0);
+        }
+      }
+      &__options {
+        top: var(--height);
+        z-index: 4;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--height);
+    padding: $input-padding;
+    overflow: hidden;
+    font-family: $input-font;
+    font-size: var(--input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $color;
+    text-align: left;
+    cursor: pointer;
+    background-color: $background-color;
+    border-color: $border-color;
+    border-style: solid;
+    border-width: $input-border-width;
+    border-radius: $input-border-radius;
+    outline: transparent;
+    appearance: none;
+    transition: $input-transition;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' fill='none'%3E%3Cpath fill='%23000' d='M14.934 12.348a.307.307 0 0 1-.09.206l-.446.446a.308.308 0 0 1-.205.09.308.308 0 0 1-.206-.09l-3.509-3.509-3.509 3.51a.308.308 0 0 1-.205.088A.29.29 0 0 1 6.56 13l-.447-.446a.307.307 0 0 1-.089-.206c0-.071.036-.151.09-.205l4.16-4.16a.308.308 0 0 1 .205-.09c.072 0 .152.036.206.09l4.16 4.16c.054.054.09.134.09.205Z' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      transition-duration: $transition-duration;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    @media (hover) {
+      &:hover {
+        border-color: $border-color-hover;
+      }
+    }
+
+    .focus {
+      color: $white-text;
+      background-color: $background-color-focus;
+      border-color: $background-color-focus;
+      outline: none;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: calc(var(--height) - 10);
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-height: 180px;
+    padding: 6px 0;
+    overflow-y: auto;
+    color: $white-text;
+    cursor: pointer;
+    visibility: hidden;
+    background-color: $background-color-list;
+    border: 1px solid $gray-bg-4;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    opacity: 0;
+    transition-duration: $transition-duration;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__option {
+    position: relative;
+    padding: 5px 10px;
+    font-family: $input-font;
+    font-size: var(--input-font-size);
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    text-align: left;
+    transition-duration: $transition-duration;
+
+    @media (hover) {
+      &:hover {
+        color: $blue-4;
+      }
+    }
+  }
+}

@@ -76,6 +76,8 @@
     "core-js": "^3.8.0",
     "nouislider": "^15.8.1",
     "overlayscrollbars": "^2.11.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "simplebar": "^6.3.0",
     "svgo": "^3.3.2",
     "swiper": "^11.1.15",
     "wnumb": "^1.2.0"

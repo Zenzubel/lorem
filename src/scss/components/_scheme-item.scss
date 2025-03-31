@@ -47,7 +47,7 @@
   &__text {
     position: static;
     max-width: 280px;
-    max-height: 42px;
+    max-height: 110px;
     margin: 0 auto;
     overflow: hidden;
     font-size: 14px;
@@ -57,9 +57,13 @@
       position: absolute;
       top: calc(var(--size) + 20px);
       left: 50%;
-      width: 182px;
+      width: 150px;
       font-size: 16px;
       transform: translateX(-50%);
+    }
+
+    @include min-width($breakpoint-lg) {
+      width: 182px;
     }
   }
 }

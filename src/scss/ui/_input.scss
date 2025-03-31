@@ -1,4 +1,9 @@
 .input {
+  $input-font-size-native: #{$input-font-size};
+  $input-font-size-native-sm: #{$input-font-size-sm};
+
+  --input-font-size: #{$input-font-size-native};
+
   $color: $gray-text-2;
   $color-placeholder: $gray-text-2;
   $border-color: $white;
@@ -6,10 +11,15 @@
   $border-color-focus: $blue-4;
   $background-color: $white-opacity-1;
 
+  @include min-width($breakpoint-md + 1) {
+    --input-font-size: #{$input-font-size-native-sm};
+  }
+
+  height: $input-height;
   padding: $input-padding;
   overflow: hidden;
   font-family: $input-font;
-  font-size: $input-font-size;
+  font-size: var(--input-font-size);
   font-weight: $input-font-weight;
   line-height: $input-line-height;
   color: $color;
@@ -24,7 +34,7 @@
 
   &::placeholder {
     font-family: $input-font;
-    font-size: $input-font-size;
+    font-size: var(--input-font-size);
     font-weight: 300;
     line-height: $input-line-height;
     color: $color-placeholder;
@@ -106,6 +116,13 @@
     background-color: $white-bg;
     border: 1px solid $blue-1;
     border-radius: $input-border-radius;
+    transition-duration: $transition-duration;
+
+    @media (hover) {
+      &:hover {
+        background-color: darken($white-bg, 20%);
+      }
+    }
 
     svg {
       width: 18px;

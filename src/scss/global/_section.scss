@@ -5,7 +5,11 @@
     }
 
     &-1 {
-      padding: 120px 0 150px;
+      padding: 60px 0;
+
+      @include min-width($breakpoint-sm) {
+        padding: 120px 0 150px;
+      }
     }
   }
 

@@ -7,9 +7,10 @@
 
   @include min-width($breakpoint-md) {
     flex-direction: row;
-    gap: 0;
+    width: 100%;
     max-width: 100%;
-    margin: 0 0 65px 0;
+    padding: 0 56px;
+    margin: 0 auto 65px;
   }
 
   &__dotes {
@@ -17,11 +18,13 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    width: 100%;
     padding: 12px 0;
 
     @include min-width($breakpoint-md) {
       flex-direction: row;
-      gap: 19px;
+      gap: 0;
+      justify-content: space-between;
       padding: 0 12px;
     }
 

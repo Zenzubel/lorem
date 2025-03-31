@@ -46,7 +46,14 @@ $button-padding-x: 15px;
 $button-padding-y: 11px;
 $button-min-width: 120px;
 
+// scrollbar
+$scrollbar-width: 8px;
+$color-thumb: red;
+$color-track: blue;
+$scrollbar-border-radius: 10px;
+
 // inputs
+$input-height: 48px;
 $input-padding: 14px 35px 14px 10px;
 $input-font: $main-font;
 $input-font-size: 14px;

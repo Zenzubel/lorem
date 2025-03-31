@@ -1,27 +1,23 @@
-.os-scrollbar {
-  &.os-theme-custom {
-    --os-size: 14px;
-    --os-padding-perpendicular: 4px;
-    --os-padding-axis: 16px;
-    --os-track-border-radius: 10px;
-    --os-track-bg: none;
-    --os-track-bg-hover: none;
-    --os-track-bg-active: none;
-    --os-track-border: none;
-    --os-track-border-hover: none;
-    --os-track-border-active: none;
-    --os-handle-border-radius: 10px;
-    --os-handle-bg: gray;
-    --os-handle-bg-hover: red;
-    --os-handle-bg-active: green;
-    --os-handle-border: 1px solid yellow;
-    --os-handle-border-hover: 1px solid blue;
-    --os-handle-border-active: 1px solid purple;
-    --os-handle-min-size: 33px;
-    --os-handle-max-size: none;
-    --os-handle-perpendicular-size: 100%;
-    --os-handle-perpendicular-size-hover: 100%;
-    --os-handle-perpendicular-size-active: 100%;
-    --os-handle-interactive-area-offset: 4px;
+.simplebar {
+  &-scrollbar {
+    width: 7px;
+    background-color: $blue-bg;
+    border: 0;
+    border-radius: 3px;
+
+    &::before {
+      background-color: $blue-bg;
+    }
+  }
+
+  &-track {
+    width: 7px;
+    margin: 5px 2px 5px 0;
+    background-color: $gray-7;
+    border-radius: 3px;
+
+    &.simplebar-vertical {
+      width: 7px;
+    }
   }
 }
